@@ -12,6 +12,7 @@ To run the randomizer, one needs to have a bz2 compressed wikidump in dump/
 $ cd ex02
 $ mkdir -p dump
 $ curl -o dump/dewiki-latest-pages-articles.xml.bz2 https://dumps.wikimedia.org/dewiki/latest/dewiki-latest-pages-articles.xml.bz2
+$ pip3 install -r requirements.txt
 $ python3 randomizer.py
 ```
 
