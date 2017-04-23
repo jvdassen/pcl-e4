@@ -41,7 +41,10 @@ def get_titles(infile, testfile, trainfile, k):
                         # If a word is about to be replaced in the reservoir
                         # write it to the trainfile and replace it in the reservoir
                         with open(trainfile, 'a') as trainfile_out:
-                            trainfile_out.write(reservoir[m] + '\n')
+                            try:
+                                trainfile_out.write(reservoir[m] + '\n')
+                            except:
+                                pass
                             trainfile_out.close()
                         reservoir[m] = elem.text
 
