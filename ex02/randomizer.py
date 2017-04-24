@@ -60,10 +60,10 @@ def get_titles(infile, testfile, trainfile, k):
                 sys.stdout.write(str(counter) +' articles processed\r')
                 sys.stdout.flush()
 
-            # Uncomment these lines if you want to see the two resulting files
-            # after evaluating only 10'000 elements.
-            if counter == 10000:
-                break;
+            # # Uncomment these lines if you want to see the two resulting files
+            # # after evaluating only 10'000 elements.
+            # if counter == 10000:
+            #     break;
 
             # Clear the current element after it was assessed so it won't stack up
             # in memory.
