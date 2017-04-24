@@ -19,7 +19,10 @@ $ curl -o dump/dewiki-latest-pages-articles.xml.bz2 https://dumps.wikimedia.org/
 $ pip3 install -r requirements.txt
 $ python3 randomizer.py
 ```
+Note: Although a slight increase in memory usage can be observed due to the overhead, it's growth should be smaller than linear growth.
+![Memory Usage ex02](https://raw.githubusercontent.com/jvdassen/pcl-e4/master/assets/memory_usage_ex02.gif)
+
 
 ### Reflexion/Feedback
 
-* Jan: Ich hatte noch nie mit so grossen Datenmengen gearbeitet. Das Implementieren einer skalierbaren Lösung sowohl wie der vorgestellte Algorithmus waren neu für mic Der Zeitaufwand betrug etwa 6h.
+* Jan: Ich hatte noch nie mit grossen Datenmengen in Python gearbeitet. Das Implementieren einer skalierbaren Lösung in Python sowohl wie der vorgestellte Algorithmus waren neu für mich Der Zeitaufwand betrug etwa 6h.
