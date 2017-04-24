@@ -4,6 +4,10 @@
 * Place all large files in _ex01/corpus_ or _ex02/dump_ or extend the _.gitignore_ file accordingly.
 * Extend the requirements.txt file in ex01 or ex02 if using additional libraries, or use pip freeze to generate it automatically.
 
+### Exercise 1
+
+somebody somebody some some some somebody
+
 ### Exercise 2
 
 To run the randomizer, one needs to have a bz2 compressed wikidump in dump/
@@ -16,6 +20,6 @@ $ pip3 install -r requirements.txt
 $ python3 randomizer.py
 ```
 
-### Exercise 3
+### Reflexion/Feedback
 
 * Jan: Ich hatte noch nie mit so grossen Datenmengen gearbeitet. Das Implementieren einer skalierbaren Lösung sowohl wie der vorgestellte Algorithmus waren neu für mic Der Zeitaufwand betrug etwa 6h.
