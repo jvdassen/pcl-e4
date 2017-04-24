@@ -10,6 +10,7 @@ from lxml import etree
 import random
 import sys
 import os
+import math
 try:
     import psutil
     psutil_available = True
@@ -27,7 +28,7 @@ def get_titles(infile, testfile, trainfile, k):
     title_tag = '{http://www.mediawiki.org/xml/export-0.10/}title'
 
     with BZ2File(infile) as xml_dump:
-        xml_parser = etree.iterparse(xml_dump, events=('end',))
+        xml_parser = etree.iterparse(xml_dump, events=('end',), encoding='utf-8')
 
         # iterates over the elements in the xml to apply the reservoir
         # sampling algorithm
@@ -41,25 +42,19 @@ def get_titles(infile, testfile, trainfile, k):
                         # If a word is about to be replaced in the reservoir
                         # write it to the trainfile and replace it in the reservoir
                         with open(trainfile, 'a') as trainfile_out:
-                            try:
-                                trainfile_out.write(reservoir[m] + '\n')
-                            except:
-                                pass
+                            trainfile_out.write(reservoir[m] + '\n')
                             trainfile_out.close()
                         reservoir[m] = elem.text
                     else:
                         with open(trainfile, 'a') as trainfile_out:
-                            try:
-                                trainfile_out.write(elem.text + '\n')
-                            except:
-                                pass
+                            trainfile_out.write(elem.text + '\n')
                             trainfile_out.close()
                 counter = counter + 1
 
             # Only print the Memory usage on systems where psutil is installed
             if psutil_available:
-                sys.stdout.write(str(counter) +' articles processed, Using approx. '
-                                + str(memusage()) + ' MB of memory currently\r')
+                sys.stdout.write(' ' +str(counter) +' articles processed, Using approx. '
+                                + str(math.floor(memusage())) + ' MB of memory currently\r')
                 sys.stdout.flush()
             else:
                 sys.stdout.write(str(counter) +' articles processed\r')
@@ -67,7 +62,7 @@ def get_titles(infile, testfile, trainfile, k):
 
             # Uncomment these lines if you want to see the two resulting files
             # after evaluating only 10'000 elements.
-            if counter > 10000:
+            if counter == 10000:
                 break;
 
             # Clear the current element after it was assessed so it won't stack up
