@@ -16,3 +16,6 @@ $ pip3 install -r requirements.txt
 $ python3 randomizer.py
 ```
 
+### Exercise 3
+
+* Jan: Ich hatte noch nie mit so grossen Datenmengen gearbeitet. Das Implementieren einer skalierbaren Lösung sowohl wie der vorgestellte Algorithmus waren neu für mic Der Zeitaufwand betrug etwa 6h.
