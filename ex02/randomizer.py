@@ -47,7 +47,13 @@ def get_titles(infile, testfile, trainfile, k):
                                 pass
                             trainfile_out.close()
                         reservoir[m] = elem.text
-
+                    else:
+                        with open(trainfile, 'a') as trainfile_out:
+                            try:
+                                trainfile_out.write(elem.text + '\n')
+                            except:
+                                pass
+                            trainfile_out.close()
                 counter = counter + 1
 
             # Only print the Memory usage on systems where psutil is installed
