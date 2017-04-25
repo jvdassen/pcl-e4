@@ -6,7 +6,15 @@
 
 ### Exercise 1
 
-somebody somebody some some some somebody
+To run the program:
+
+Make sure that filepath in line 88 points to a valid directory.
+
+```
+$ cd ex01
+$ pip3 install -r requirements.txt
+python3 a1.py
+```
 
 ### Exercise 2
 
@@ -26,3 +34,6 @@ Note: Although a slight increase in memory usage can be observed due to the over
 ### Reflexion/Feedback
 
 * Jan: Ich hatte noch nie mit grossen Datenmengen in Python gearbeitet. Das Implementieren einer skalierbaren Lösung in Python sowohl wie der vorgestellte Algorithmus waren neu für mich Der Zeitaufwand betrug etwa 6h.
+
+* Luc: Während dem programmieren musste ich noch nie aufs memory schauen. Darum habe ich in dieser Übung viel gelernt. Ebenfalls lxml und parsen waren neu für mich.
+Ich habe etwa 7 stunden in die Übung investiert.
