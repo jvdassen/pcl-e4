@@ -8,7 +8,7 @@
 
 To run the program:
 
-Make sure that filepath in line 88 points to a valid directory.
+Make sure that filepath in line 89 points to a valid directory.
 
 ```
 $ cd ex01

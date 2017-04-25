@@ -1,4 +1,6 @@
 #!/usr/bin/python
+#Luc Boillat 14-715-577
+#Jan von der Assen 14-719-132
 
 '''
 The randomizer module can be used to split a set of articles into to files.
@@ -62,8 +64,8 @@ def get_titles(infile, testfile, trainfile, k):
 
             # # Uncomment these lines if you want to see the two resulting files
             # # after evaluating only 10'000 elements.
-            # if counter == 10000:
-            #     break;
+            #if counter == 10000:
+            #    break;
 
             # Clear the current element after it was assessed so it won't stack up
             # in memory.
